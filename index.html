@@ -41,6 +41,8 @@
 <script>
   function myfunction() {
     document.getElementById("b1").style.color = "red";
+    await new Promise(r => setTimeout(r, 5));
+    document.getElementById("b1").style.color = "black";
 }
 </script>
   
