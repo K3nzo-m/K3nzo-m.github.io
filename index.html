@@ -6,74 +6,82 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
   <style>
     html, body {
-      font-family: Helvetica;
+      font-family: arial;
       margin: 0;
     }
 
     .topnav {
-      padding: 0 10% 0 10%;
-      background: #242424;
-      color: white;
+      position: fixed;
+      padding: none;
       overflow: hidden;
-      height: 80px;
-      border-radius: 5px;
+      background: #242424;
+      color: #fff;
+      text-decoration: none;
+      font-size: 20px;
+      height: 55px;
+      width: 100%;
+      border-bottom: 1px solid #666;
+      line-height: 55px;
+
     }
 
     .topnav a {
-      padding: 20px 20px 20px 20px;
-      float: right;
-      display: block;
-      background: inherit;
-      color: #cf4f3f;
-      text-align: center;
+      position: relative;
       text-decoration: none;
-      font-weight: 100;
-      font-size: 30px;
-      transition: 1s;
+      font-family: Courier New;
+      font-size: 20px;
+      float: right;
+      margin: 0 15px;
+      height: 55px;
+      color: #fff;
     }
 
-    .topnav a:hover {
-      background-color: #292929;
-    }
+      .topnav a:hover {
+        color: #aaa
+      }
 
-    .topnav a.active {
-      background-color: inherit;
-      color: white;
-    }
-
-    .header {
-      text-align: center;
-      padding: 50px 20px 50px 20px;
-      background: linear-gradient(60deg,#1c1c1c,#2c2c2c,#2a2a2a);
-      opacity: 1;
-      color: white;
-      font-size: 25px;
-      border: 3px black;
+    .navoptions {
+      padding: 0 20px;
+      -webkit-box-align: center;
+      display: flex;
+      -webkit-box-orient: horizontal;
+      -webkit-box-direction: normal;
+      flex-direction: row;
+      max-width: 975px;
+      width: 100%;
+      justify-content: center;
+      box-sizing: border-box;
+      flex-shrink: 0;
+      margin: 0 auto;
+      position: relative;
+      font: inherit;
+      vertical-align: baseline;
     }
 
     .sidebox {
       position: absolute;
+      top: 81px;
       width: 400px;
-      height: 100%;
+      height: 620px;
       padding: 10px;
-      background: #1a1a1a;
-      border-radius: 5px;
+      background: #222;
+
     }
 
     .profilecard {
       text-align: center;
       position: inherit;
       width: 200px;
-      height: 100px;
+      height: 200px;
       border-radius: 10px;
-      border-top: 60px solid #b54b35;
-      margin: 40px 105px 105px 105px;
+      border-top: 60px solid #666;
+      margin: 20px 105px 105px 105px;
     }
 
     .suggestions {
       text-align: left;
       width: 200px;
-      height: 350px;
+      height: 300px;
       margin: 260px 105px 0px 105px;
     }
 
@@ -85,34 +93,29 @@
     }
 
     .feed {
-      padding: 30px 420px 0 440px;
+      padding: 80px 420px 0 440px;
       text-align: left;
       height: auto;
     }
 
     .post {
       background: #303030;
-      border-radius: 20px;
-      border: 1px solid #1a1a1a;
+      border-radius: 5px;
+      border: 1px solid #666;
       text-align: left;
       height: 400px;
       width: 600px;
       margin-bottom: 30px;
     }
 
-    .navstick {
-      position: fixed;
-      top: 0;
-      width: 80%;
-    }
-
     .leftstick {
-      top: 63px;
+      bottom: 0;
+      height: 620px;
       position: fixed;
     }
 
-    .feedscroll {
-      padding-top: 102px;
+    .background {
+      background: <img src="file:///Users/Kenzo/Desktop/Globe.png">
     }
 
     p {
@@ -122,19 +125,19 @@
 
   </style>
   </head>
-  <body style="background:linear-gradient(100deg,#101010,#222);">
-    <div class="header">
-      <p id="phrase">The world's most secure social media platform.</p>
-    </div>
+  <body style="background:#222;">
     <div class="topnav" id="mytopnav">
-      <a href="#home" class="active" style="float:left;padding:0;"><img style="height:70px;" id="logo" src="images/Inter-Sphere-Logo.png" alt="logo"></a>
-      <a href="#profile" id="profile">Profile</a>
-      <a href="#messages" id="messages">Messages</a>
-      <a href="#home" class="active" id="home">Home</a>
+      <div class="navoptions">
+        <a href="#home" style="padding-right:400px;"><img style="padding:7.5px 0;height:40px;" src="file:///Users/Kenzo/Desktop/Inter-Sphere-Logo.png" alt="file:///Users/Kenzo/Desktop/Inter-Sphere-Logo.png"></a>
+        <a href="#home">Home</a>
+        <a href="#messages">Messages</a>
+        <a href="#profile">Profile</a>
+        <a href="#login">Login</a>
+      </div>
     </div>
     <div class="sidebox" id="sidebox">
       <div class="profilecard">
-        <img style="height: 60px;border-radius:50%;position: relative; top: -25px;"src="images/profile.png" alt="PP">
+        <img style="height: 60px;border-radius:50%;position: relative; top: -25px;"src="https://cdn.business2community.com/wp-content/uploads/2017/08/blank-profile-picture-973460_640.png" alt="https://cdn.business2community.com/wp-content/uploads/2017/08/blank-profile-picture-973460_640.png">
         <p style="position:relative; left: -65px;top: -50px;color:#aaa;">Followers</p>
         <p style="position:relative; left: +65px;top: -68px;color:#aaa;">Following</p>
         <p style="position:relative;top: -40px;color: #b6b6b6;">Mackenzie Moore</p>
@@ -159,45 +162,30 @@
       <div class="post">
         <p></p>
       </div>
+      <div class="post">
+        <p></p>
+      </div>
+      <div class="post">
+        <p></p>
+      </div>
+      <div class="post">
+        <p></p>
+      </div>
     </div>
     <script>
-      window.onscroll = function() {myFunction(),scrollFunction(),fade()};
+      window.onscroll = function() {myFunction()};
 
       var header = document.getElementById("mytopnav");
       var leftbar = document.getElementById("sidebox");
       var hsticky = header.offsetTop;
-      var lsticky = leftbar.offsetTop;
-      var feed = document.getElementById("feed");
 
       function myFunction() {
         if (window.pageYOffset > hsticky) {
-          header.classList.add("navstick");
           leftbar.classList.add("leftstick");
-          feed.classList.add("feedscroll");
 
         } else {
-          header.classList.remove("navstick");
           leftbar.classList.remove("leftstick");
-          feed.classList.remove("feedscroll");
         }
-      }
-      function scrollFunction() {
-        if (window.pageYOffset > hsticky) {
-          document.getElementById("mytopnav").style.height = "63px";
-          document.getElementById("home").style.fontSize = "20px";
-          document.getElementById("messages").style.fontSize = "20px";
-          document.getElementById("profile").style.fontSize = "20px";
-          document.getElementById("logo").style.height = "63px";
-        } else {
-          document.getElementById("mytopnav").style.height = "80px";
-          document.getElementById("home").style.fontSize = "30px";
-          document.getElementById("messages").style.fontSize = "30px";
-          document.getElementById("profile").style.fontSize = "30px";
-          document.getElementById("logo").style.height = "80px";
-        }
-      }
-      function fade() {
-        document.getElementById("phrase").style.opacity = 1-window.pageYOffset/70;
       }
     </script>
   </body>
