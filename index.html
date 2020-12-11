@@ -11,14 +11,15 @@
   <body style="background:#222;">
     <header>
     <div class="container">
-      <img class="logo" style="height:40px;" src="https://K3nzo-m.github.io/resources/images/Inter-Sphere-Logo.png">
+      <img class="logo" src="https://K3nzo-m.github.io/resources/images/Inter-Sphere-Logo.png">
 
       <nav id="mytopnav">
         <ul>
-          <li><a onmouseover="hoveron('home')" onmouseout="hoveroff('home')" href="https://k3nzo-m.github.io"><i class="material-icons-outlined" id="home">home</i></a></li>
-          <li><a onmouseover="hoveron('message')" onmouseout="hoveroff('message')" href="https://k3nzo-m.github.io/Messages/"><i class="material-icons-outlined" id="message">message</i></a></li>
-          <li><a onmouseover="hoveron('profile')" onmouseout="hoveroff('profile')" href="https://k3nzo-m.github.io/Profile/"><i class="material-icons-outlined" id="profile">account_circle</i></a></li>
-          <li><a onmouseover="hoveron('login')" onmouseout="hoveroff('login')" href="https://k3nzo-m.github.io/Login/"><i class="material-icons-outlined" id="login">login</i></a></li>
+          <li><input class="search" type="text" placeholder="Search..."></li>
+          <li><a href="https://k3nzo-m.github.io"><i class="material-icons-outlined" id="home">home</i></a></li>
+          <li><a href="https://k3nzo-m.github.io/Messages/"><i class="material-icons-outlined" id="message">message</i></a></li>
+          <li><a href="https://k3nzo-m.github.io/Profile/"><i class="material-icons-outlined" id="profile">account_circle</i></a></li>
+          <li><a href="https://k3nzo-m.github.io/Login/"><i class="material-icons-outlined" id="login">login</i></a></li>
         </ul>
       </nav>
     </div>
@@ -59,31 +60,33 @@
       <div class="post">
         <p></p>
       </div>
+      <div class="post">
+        <p></p>
+      </div>
+      <div class="post">
+        <p></p>
+      </div>
+      <div class="post">
+        <p></p>
+      </div>
+      <div class="post">
+        <p></p>
+      </div>
+      <div class="post">
+        <p></p>
+      </div>
+      <div class="post">
+        <p></p>
+      </div>
+      <div class="post">
+        <p></p>
+      </div>
+      <div class="post">
+        <p></p>
+      </div>
+      <div class="post">
+        <p></p>
+      </div>
     </div>
-    <script>
-      window.onscroll = function() {myFunction()};
-
-      var header = document.getElementById("mytopnav");
-      var leftbar = document.getElementById("sidebox");
-      var hsticky = header.offsetTop;
-
-      function myFunction() {
-        if (window.pageYOffset > hsticky) {
-          leftbar.classList.add("leftstick");
-
-        } else {
-          leftbar.classList.remove("leftstick");
-        }
-      }
-
-      function hoveron(id) {
-        //document.getElementById(id).className = 'material-icons-sharp';
-        document.getElementById(id).style.color = '#666';
-      }
-      function hoveroff(id) {
-        //document.getElementById(id).className = 'material-icons-outlined';
-        document.getElementById(id).style.color = '#fff';
-      }
-    </script>
   </body>
 </html>

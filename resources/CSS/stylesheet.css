@@ -14,6 +14,7 @@ header {
   top: 0;
   position: fixed;
   width: 100%;
+  height: 60px;
 }
 
 header::after {
@@ -23,6 +24,7 @@ header::after {
 }
 
 .logo {
+  height: 40px;
   float: left;
   padding: 10px 0;
   cursor: pointer;
@@ -33,6 +35,7 @@ nav {
 }
 
 nav ul {
+  max-height: 60px;
   margin: 0;
   padding: 0;
   list-style: none;
@@ -52,10 +55,22 @@ nav a {
   font-size: 14px;
 }
 
+nav a:hover {
+  color: #666;
+}
+
+nav input[type=text] {
+  background-color: #242424;
+  border-radius: 3px;
+  border: 1px solid #666;
+  color: white;
+  font-size: 15px;
+}
+
 .sidebox {
-  position: absolute;
-  top: 81px;
-  width: 400px;
+  position: fixed;
+  top: 61px;
+  width: 470px;
   height: 620px;
   padding: 10px;
   background: #222;
@@ -69,27 +84,28 @@ nav a {
   height: 200px;
   border-radius: 10px;
   border-top: 60px solid #666;
-  margin: 20px 105px 105px 105px;
+  margin: 40px 140px 105px;
 }
 
 .suggestions {
   text-align: left;
   width: 200px;
   height: 300px;
-  margin: 260px 105px 0px 105px;
+  margin: 280px 105px 0px 105px;
 }
 
 .credits {
   text-align: left;
   color: #888;
   font-size: 10px;
-  margin: 20px 105px 0px 105px;
+  margin: auto 105px;
 }
 
 .feed {
-  padding: 80px 420px 0 440px;
+  padding: 111px 0 0 490px;
   text-align: left;
   height: auto;
+  width: 600px;
 }
 
 .post {
@@ -98,8 +114,8 @@ nav a {
   border: 1px solid #666;
   text-align: left;
   height: 400px;
-  width: 600px;
-  margin-bottom: 30px;
+  width: inherit;
+  margin-bottom: 50px;
 }
 
 .leftstick {
