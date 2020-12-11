@@ -4,58 +4,61 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Two+Tone|Material+Icons+Round|Material+Icons+Sharp" rel="stylesheet">
+  </head>
   <style>
     html, body {
       font-family: arial;
       margin: 0;
     }
 
-    .topnav {
-      position: fixed;
-      padding: none;
-      overflow: hidden;
+    .container {
+    width: 80%;
+    margin: 0 auto;
+    }
+
+    header {
       background: #242424;
-      color: #fff;
-      text-decoration: none;
-      font-size: 20px;
-      height: 55px;
-      width: 100%;
       border-bottom: 1px solid #666;
-      line-height: 55px;
-
-    }
-
-    .topnav a {
-      position: relative;
-      text-decoration: none;
-      font-family: Courier New;
-      font-size: 20px;
-      float: right;
-      margin: 0 15px;
-      height: 55px;
-      color: #fff;
-    }
-
-      .topnav a:hover {
-        color: #aaa
-      }
-
-    .navoptions {
-      padding: 0 20px;
-      -webkit-box-align: center;
-      display: flex;
-      -webkit-box-orient: horizontal;
-      -webkit-box-direction: normal;
-      flex-direction: row;
-      max-width: 975px;
+      top: 0;
+      position: fixed;
       width: 100%;
-      justify-content: center;
-      box-sizing: border-box;
-      flex-shrink: 0;
-      margin: 0 auto;
+    }
+
+    header::after {
+      content: '';
+      display: table;
+      clear: both;
+    }
+
+    .logo {
+      float: left;
+      padding: 10px 0;
+      cursor: pointer;
+    }
+
+    nav {
+      float: right;
+    }
+
+    nav ul {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    nav li {
+      display: inline-block;
+      margin-left: 70px;
+      padding: 16px 0;
       position: relative;
-      font: inherit;
-      vertical-align: baseline;
+    }
+
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      text-transform: uppercase;
+      font-size: 14px;
     }
 
     .sidebox {
@@ -122,18 +125,23 @@
   </style>
   </head>
   <body style="background:#222;">
-    <div class="topnav" id="mytopnav">
-      <div class="navoptions">
-        <a href="https://k3nzo-m.github.io" style="padding-right:400px;"><img style="padding:7.5px 0;height:40px;" src="https://k3nzo-m.github.io/images/Inter-Sphere-Logo.png"></a>
-        <a href="https://k3nzo-m.github.io">Home</a>
-        <a href="https://k3nzo-m.github.io/Messages/">Messages</a>
-        <a href="https://k3nzo-m.github.io/Profile/">Profile</a>
-        <a href="https://k3nzo-m.github.io/Login/">Login</a>
-      </div>
+    <header>
+    <div class="container">
+      <img class="logo" style="height:40px;" src="https://k3nzo-m.github.io/images/Inter-Sphere-Logo.png">
+
+      <nav id="mytopnav">
+        <ul>
+          <li><a onmouseover="hoveron('home')" onmouseout="hoveroff('home')" href="https://k3nzo-m.github.io"><i class="material-icons-outlined" id="home">home</i></a></li>
+          <li><a onmouseover="hoveron('message')" onmouseout="hoveroff('message')" href="https://k3nzo-m.github.io/Messages/"><i class="material-icons-outlined" id="message">message</i></a></li>
+          <li><a onmouseover="hoveron('profile')" onmouseout="hoveroff('profile')" href="https://k3nzo-m.github.io/Profile/"><i class="material-icons-outlined" id="profile">account_circle</i></a></li>
+          <li><a onmouseover="hoveron('login')" onmouseout="hoveroff('login')" href="https://k3nzo-m.github.io/Login/"><i class="material-icons-outlined" id="login">login</i></a></li>
+        </ul>
+      </nav>
     </div>
+    </header>
     <div class="sidebox" id="sidebox">
       <div class="profilecard">
-        <img style="height: 60px;border-radius:50%;position: relative; top: -25px;"src="images/profile.png" alt="https://cdn.business2community.com/wp-content/uploads/2017/08/blank-profile-picture-973460_640.png">
+        <img style="height: 60px;border-radius:50%;position: relative; top: -25px;"src="https://k3nzo-m.github.io/images/profile.png">
         <p style="position:relative; left: -65px;top: -50px;color:#aaa;">Followers</p>
         <p style="position:relative; left: +65px;top: -68px;color:#aaa;">Following</p>
         <p style="position:relative;top: -40px;color: #b6b6b6;">Mackenzie Moore</p>
@@ -182,6 +190,15 @@
         } else {
           leftbar.classList.remove("leftstick");
         }
+      }
+
+      function hoveron(id) {
+        //document.getElementById(id).className = 'material-icons-sharp';
+        document.getElementById(id).style.color = '#666'
+      }
+      function hoveroff(id) {
+        //document.getElementById(id).className = 'material-icons-outlined';
+        document.getElementById(id).style.color = '#fff'
       }
     </script>
   </body>
